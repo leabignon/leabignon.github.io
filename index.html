@@ -27,6 +27,8 @@ body{
   background-color: white;
   display: flex; /* Make the navbar a flex container */
   justify-content: center; /* Center the navbar items horizontally */
+  width: 100%; /* Make the navbar full-width */
+  position: fixed; /* Make the navbar sticky */
 }
 
 #navbar a {
@@ -60,10 +62,7 @@ body{
 .sticky{
   position: fixed;
   top: 0;
-  margin: auto;
-  display: flex; /* Make the navbar a flex container */
-  justify-content: center; /* Center the navbar items horizontally */
-  
+  margin: auto;  
 }
 
 .sticky + .content {
