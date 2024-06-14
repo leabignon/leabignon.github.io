@@ -130,7 +130,13 @@ color: #000000;
 img{
   max-width: 100%; /* Ensure the image doesn't exceed the container width */
 }
-  
+
+.responsive-image {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-width: 500px; /* Optional: maximum width */
+    }
+
 @media (max-width: 768px) {
   .left-column, .right-column {
     flex-basis: 100%; /* Each column takes up full width */
@@ -159,7 +165,7 @@ img{
 <div id="home" class="content">
 <section class="split-section">
   <div class="left-column">
-    <img src="IMG_4996.jpeg" alt=" ">
+    <img src="IMG_4996.jpeg" class="responsive-image" alt=" ">
   </div>
   <div class="right-column">
     <p>I am a PhD student at the Toulouse School of Economics.</p>
@@ -229,6 +235,7 @@ function myFunction() {
         });
     });
 </script>
+    
 
     
 </body>
