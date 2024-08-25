@@ -223,7 +223,9 @@ function myFunction() {
         // JavaScript to handle toggle functionality
         const toggleLink = document.getElementById('toggle-link');
         const hiddenParagraph = document.getElementById('hidden-paragraph');
-
+    
+        hiddenParagraph.style.display = 'none';
+    
         toggleLink.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
 
