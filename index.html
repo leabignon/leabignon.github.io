@@ -15,6 +15,9 @@ body{
   font-family: "Montserrat", sans-serif;
   text-align:justify;
   line-height:25px;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -52,6 +55,9 @@ h5 {
   background-color: white;
   text-align: center;
   font-size: 60px;
+  line-height: 72px; 
+  padding: 0em;
+  height: 100px;
 }
 
 
@@ -69,27 +75,28 @@ h5 {
   display: flex;
   color: #c8ad7f;
   text-align: center;
-  padding: 5px 16px 15px;
+  padding: 10px 16px 10px;
   text-decoration: none;
   font-size: 26px;
+  height: 26px;
 }
 
 #navbar a:hover {
   background-color: white;
   color: #0404aa;
-<!-- color: #000000 ; -->
 }
 
 #navbar a.active {
   background-color: white;
   color: #0404aa;
-<!--     color: #000000 ;-->
 }
 
 .content {
-  padding: 1 em;
+  padding: 2em;
   max-width: 70%;
   margin: auto;
+  scroll-snap-align: start;
+  display: flex;
 }
 
 .sticky{
@@ -160,7 +167,7 @@ img{
     padding: 0; /* Remove padding between columns */
   }
   .content {
-  padding: 1 em;
+  padding: 1em;
   max-width: 95%;
   margin: auto;
 }
@@ -179,7 +186,7 @@ img{
   <a href="bignon_cv.pdf" target="_blank">C.V.</a>
 </div>
 
-<div id="home" class="content">
+<div id="home" class="content" style="min-height: calc(100vh - 46px - 100px);">
 <section class="split-section">
   <div class="left-column">
     <!-- <img src="IMG_4996.jpeg" class="responsive-image" alt=" ">-->
@@ -205,7 +212,7 @@ img{
 </section>
 </div>
 
-<div id="research" class="content">
+<div id="research" class="content" style="min-height: calc(100vh - 46px - 10px); height: auto; display: block; scroll-margin-top: 10px;">
   <h1> Research </h1>
   <h2> Working papers</h2>
   <h4 style="margin-bottom: 0.5em;text-align: left;"> <a href="papers/Bignon_JMP.pdf" target="_blank" style="color: black;">Pharmaceuticals and Digital Health: How Data-driven Insights May Reshape the Insulin Market</a> <b style="font-weight: 600;">(Job Market Paper)</b></h4>
@@ -284,54 +291,6 @@ function myFunction() {
     });
   });
 </script>
-
-<!-- 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-        // JavaScript to handle toggle functionality
-        const toggleLink1 = document.getElementById('toggle-link1');
-        const hiddenParagraph1 = document.getElementById('hidden-paragraph1');
-    
-        hiddenParagraph1.style.display = 'none';
-    
-        toggleLink1.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-
-            // Toggle hidden paragraph visibility
-            if (hiddenParagraph1.style.display === 'none') {
-                hiddenParagraph1.style.display = 'block';
-                toggleLink1.textContent = 'Hide Abstract';
-            } else {
-                hiddenParagraph1.style.display = 'none';
-                toggleLink1.textContent = 'Abstract';
-            }
-        });
-    });
-</script>
-    
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-        // JavaScript to handle toggle functionality
-        const toggleLink = document.getElementById('toggle-link');
-        const hiddenParagraph = document.getElementById('hidden-paragraph');
-    
-        hiddenParagraph.style.display = 'none';
-    
-        toggleLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-
-            // Toggle hidden paragraph visibility
-            if (hiddenParagraph.style.display === 'none') {
-                hiddenParagraph.style.display = 'block';
-                toggleLink.textContent = 'Hide Abstract';
-            } else {
-                hiddenParagraph.style.display = 'none';
-                toggleLink.textContent = 'Abstract';
-            }
-        });
-    });
-</script>
--->
     
 </body>
 </html>
