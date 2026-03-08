@@ -203,7 +203,13 @@ img{
   #home {
     min-height: calc(100vh - var(--header-height) - var(--navbar-height));
   }
+/* When navbar is sticky on mobile, push home content down */
+  .sticky + #home {
+    padding-top: calc(var(--navbar-height) + 1em);
+    height: auto;
+  }
 }
+  
 </style>
 </head>
    
